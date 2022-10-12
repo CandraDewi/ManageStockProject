@@ -9906,8 +9906,8 @@ a:focus {
 }
 
 .bg-gradient-secondary {
-  background-color: #858796;
-  background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
+  background-color: #5a5c69;
+  background-image: linear-gradient(180deg, #5a5c69 10%, #60616f 100%);
   background-size: cover;
 }
 
@@ -10861,7 +10861,7 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+  background: ("../img/invent");
   background-position: center;
   background-size: cover;
 }
