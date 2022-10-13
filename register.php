@@ -1,3 +1,48 @@
+<?php
+include 'config/config.php';
+
+error_reporting(0);
+
+session_start();
+
+if (isset($_SESSION['email'])) {
+  header("Location: index.php");
+
+  (isset($_POST['submit'])) {
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    $cpassword = md5($_POST['cpassword']);
+
+    if ($password == $cpassword) {
+      $sql = "SELECT * FROM register WHERE email='$email'";
+      $result = mysqli_query($conn, $sql);
+      if (!$result->num_rows > 0) {
+          $sql = "INSERT INTO register (firstname, lastname, email, password)
+                  VALUES ('$firstname', '$lastname', '$username', '$email', '$password')";
+          $result = mysqli_query($conn, $sql);
+          if ($result) {
+              echo "<script>alert('Selamat, registrasi berhasil!')</script>";
+              $firstname = "";
+              $lastname = "";
+              $email = "";
+              $_POST['password'] = "";
+              $_POST['cpassword'] = "";
+          } else {
+              echo "<script>alert('Terjadi kesalahan.')</script>";
+          }
+      } else {
+          echo "<script>alert('Email Sudah Terdaftar.')</script>";
+      }
+    } else {
+      echo "<script>alert('Password Tidak Sesuai')</script>";
+  }
+}
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,33 +70,33 @@
           <!-- Nested Row within Card Body -->
           <div class="row">
             <!-- <div class="col-lg-5 d-none d-lg-block bg-register-image"></div> -->
-            <img src="img/5110589.png" alt="" class="col-lg-5 d-none d-lg-block p-5">
+            <img src="img/inventory.svg" alt="" style="width: 600px; height: 500px" class="col-lg-5 d-none d-lg-block p-5" />
             <div class="col-lg-7">
               <div class="p-5">
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                 </div>
-                <form class="user">
+                <form action="" method="POST" class="user">
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" />
+                      <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" name="firstname" value="<?php echo $firstname; ?>" required>
                     </div>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name" />
+                      <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name" name="lastname" value="<?php echo $lastname; ?>" required>
                     </div>
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address" />
+                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address"  name="email" value="<?php echo $email; ?>" required>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" />
+                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
                     </div>
                     <div class="col-sm-6">
-                      <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password" />
+                      <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
                     </div>
                   </div>
-                  <a href="login.html" class="btn btn-secondary btn-user btn-block"> Register Account </a>
+                  <button class="btn btn-secondary btn-user btn-block"> Register Account </button>
                   <hr />
                 </form>
                 <hr />
