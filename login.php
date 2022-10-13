@@ -1,3 +1,28 @@
+<?php
+include 'config/config.php';
+
+error_reporting(0);
+
+session_start();
+
+if (isset($_SESSION['email'])) {
+    header("location : index.php");
+}
+if (isset($_POST['submit'])) {
+  $email = $_POST['email'];
+  $password = md5($_POST['password']);
+
+  $sql = "SELECT * FROM register WHERE email='$email' AND password='$password'";
+  $result = mysqli_query($conn, $sql);
+  if ($result->num_rows > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $_SESSION['email'] = $row['email'];
+    header("location : index.php");
+  } else {
+    echo "<script>alert('email atau password anda salah')</script>";
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,10 +41,13 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-
   </head>
+   
 
   <body class="bg-gradient-secondary d-flex justify-content-center align-items-center">
+  <div class="alert alert-warning" role="alert">
+        <?php echo $_SESSION['error']?>
+    </div>
     <div class="container">
       <!-- Outer Row -->
       <div class="row d-flex justify-content-center align-items-center">
@@ -29,18 +57,18 @@
               <!-- Nested Row within Card Body -->
               <div class="row">
                 <!-- <div class="col-lg-6 d-none d-lg-block"></div> -->
-                <img src="img/Stock icon.jpg" alt="" class="col-lg-6 d-none d-lg-block">
+                <img src="img/inventory.svg" alt="" style="width: 600px; height: 500px" class="col-lg-6 d-none d-lg-block" />
                 <div class="col-lg-6">
                   <div class="p-5">
                     <div class="text-center">
                       <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                     </div>
-                    <form class="user">
+                    <form action="" method="POST" class="user">
                       <div class="form-group">
-                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." />
+                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" value="<?php echo $email; ?>" required>
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" />
+                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
                       </div>
                       <div class="form-group">
                         <div class="custom-control custom-checkbox small">
@@ -48,7 +76,7 @@
                           <label class="custom-control-label" for="customCheck">Remember Me</label>
                         </div>
                       </div>
-                      <a href="index.html" class="btn btn-secondary btn-user btn-block"> Login </a>
+                      <button class="btn btn-secondary btn-user btn-block"> Login </button>
                       <hr />
                       <!-- <a href="index.html" class="btn btn-google btn-user btn-block"> <i class="fab fa-google fa-fw"></i> Login with Google </a> -->
                       <!-- <a href="index.html" class="btn btn-facebook btn-user btn-block"> <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook </a> -->
