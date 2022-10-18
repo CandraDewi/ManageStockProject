@@ -1,29 +1,4 @@
-<?php
-include 'config/config.php';
-
-error_reporting(0);
-
-session_start();
-
-if (isset($_SESSION['email'])) {
-    header("location : index.php");
-}
-if (isset($_POST['submit'])) {
-  $email = $_POST['email'];
-  $password = md5($_POST['password']);
-
-  $sql = "SELECT * FROM register WHERE email='$email' AND password='$password'";
-  $result = mysqli_query($conn, $sql);
-  if ($result->num_rows > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $_SESSION['email'] = $row['email'];
-    header("location : index.php");
-  } else {
-    echo "<script>alert('email atau password anda salah')</script>";
-  }
-}
-?>
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -65,10 +40,10 @@ if (isset($_POST['submit'])) {
                     </div>
                     <form action="" method="POST" class="user">
                       <div class="form-group">
-                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" value="<?php echo $email; ?>" required>
+                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Your Email">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
+                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
                       </div>
                       <div class="form-group">
                         <div class="custom-control custom-checkbox small">
@@ -76,7 +51,7 @@ if (isset($_POST['submit'])) {
                           <label class="custom-control-label" for="customCheck">Remember Me</label>
                         </div>
                       </div>
-                      <button class="btn btn-secondary btn-user btn-block"> Login </button>
+                      <a class="btn btn-secondary btn-user btn-block" href="index.html"> Login </a>
                       <hr />
                       <!-- <a href="index.html" class="btn btn-google btn-user btn-block"> <i class="fab fa-google fa-fw"></i> Login with Google </a> -->
                       <!-- <a href="index.html" class="btn btn-facebook btn-user btn-block"> <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook </a> -->
