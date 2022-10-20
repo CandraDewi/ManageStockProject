@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Outlet Manage</title>
+    <title>Stock Manage</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
@@ -109,7 +109,7 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-          <a class="nav-link" style="color: #eaeaea" href="">
+          <a class="nav-link" style="color: #eaeaea" href="outlet_list.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Outlet</span></a
           >
@@ -139,6 +139,7 @@
         <div id="content">
           <!-- Topbar -->
           <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
             <!-- Sidebar Toggle (Topbar) -->
             <form class="form-inline">
               <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -180,14 +181,14 @@
                 </div>
               </li>
 
-              <!-- Nav Item - Alerts -->
+              <!-- Nav Item - Alerts
               <li class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-bell fa-fw"></i>
+                  <i class="fas fa-bell fa-fw"></i> -->
                   <!-- Counter - Alerts -->
-                  <span class="badge badge-danger badge-counter">3+</span>
-                </a>
-                <!-- Dropdown - Alerts -->
+                  <!-- <span class="badge badge-danger badge-counter">3+</span>
+                </a> --> -->
+                <!-- Dropdown - Alerts
                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                   <h6 class="dropdown-header">Alerts Center</h6>
                   <a class="dropdown-item d-flex align-items-center" href="#">
@@ -225,15 +226,15 @@
                   </a>
                   <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                 </div>
-              </li>
+              </li> -->
 
               <!-- Nav Item - Messages -->
-              <li class="nav-item dropdown no-arrow mx-1">
+              <!-- <li class="nav-item dropdown no-arrow mx-1">
                 <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-envelope fa-fw"></i>
+                  <i class="fas fa-envelope fa-fw"></i> -->
                   <!-- Counter - Messages -->
-                  <span class="badge badge-danger badge-counter">7</span>
-                </a>
+                  <!-- <span class="badge badge-danger badge-counter">7</span>
+                </a> -->
                 <!-- Dropdown - Messages -->
                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                   <h6 class="dropdown-header">Message Center</h6>
@@ -321,64 +322,202 @@
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold" style="color: #3c4048">Outlet List</h6>
+                <h6 class="m-0 font-weight-bold" style="color: #3c4048">Stock List</h6>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
-                        <th class="judul" style="color: #00abb3">Name</th>
-                        <th class="judul" style="color: #00abb3">Address</th>
-                        <th class="judul" style="color: #00abb3">Operation Hours</th>
-                        <th class="judul" style="color: #00abb3">Contact</th>
-                        <th class="judul" style="color: #00abb3">Last Transaction</th>
+                        <th class="judul" style="color: #00abb3">Kode Barang</th>
+                        <th class="judul" style="color: #00abb3">Nama Barang</th>
+                        <th class="judul" style="color: #00abb3">Stok Awal</th>
+                        <th class="judul" style="color: #00abb3">Barang Masuk</th>
+                        <th class="judul" style="color: #00abb3">Barang Keluar </th>
+                        <th class="judul" style="color: #00abb3">Stok Akhir </th>
+                        <th class="judul" style="color: #00abb3">Manage</th>
+
+
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Kepiting Jay Food</td>
-                        <td>Jl. Merpati No.36</td>
-                        <td>Monday-Sunday 24 Hours</td>
-                        <td>61</td>
-                        <td>2022/04/25</td>
-                        <td>$320,800</td>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
                       </tr>
                       <tr>
-                        <td>Dapur Cak Ning</td>
-                        <td>Jl. Teuku Umar Gg. Sesapi No.5</td>
-                        <td>Monday-Sunday 24 Hours</td>
-                        <td>63</td>
-                        <td>2022/07/25</td>
-                        <td>$170,750</td>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
                       </tr>
                       <tr>
-                        <td>Dimsum Bunda</td>
-                        <td>Jl. Tangkuban Perahu No.98</td>
-                        <td>Monday-Sunday 24 Hours</td>
-                        <td>66</td>
-                        <td>2022/01/12</td>
-                        <td>$86,000</td>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
                       </tr>
                       <tr>
-                        <td>Dapur Arum</td>
-                        <td>Jl. Kerobokan No.88</td>
-                        <td>
-                          Monday-Saturday 09.00-17.00 <br />
-                          Sunday 09.00-15.00
-                        </td>
-                        <td>22</td>
-                        <td>2022/03/29</td>
-                        <td>$433,060</td>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
                       </tr>
                       <tr>
-                        <td>Lapo Toba Tabo</td>
-                        <td>Jl. Kargo Permai No.198</td>
-                        <td>Monday-Sunday 24 Hours</td>
-                        <td>33</td>
-                        <td>2022/09/28</td>
-                        <td>$162,700</td>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
                       </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                      <tr>
+                        <td>T-001</td>
+                        <td>Tepung Terigu</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                       <tr>
+                        <td>T-001</td>
+                        <td>Bawang Merah</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>120</td>
+                      </tr>
+                    </div>
                     </tbody>
                   </table>
                 </div>
