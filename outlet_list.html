@@ -7,11 +7,14 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Outlet Manage</title>
+    <title>Manage Inventory | Outlet</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
@@ -92,7 +95,8 @@
         <li class="nav-item">
           <a class="nav-link" style="color: #eaeaea" href="stock.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Product Stock</span></a>
+            <span>Product Stock</span></a
+          >
           <!-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Filter Stock :</h6>
@@ -311,7 +315,7 @@
           <!-- End of Topbar -->
 
           <!-- Begin Page Content -->
-          <div class="container-fluid">
+          <div class="container">
             <!-- Page Heading -->
             <!-- <h1 class="h3 mb-2 text-gray-800">Outlet</h1> -->
             <!-- <p class="mb-4">
@@ -319,69 +323,114 @@
             </p> -->
 
             <!-- DataTales Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold" style="color: #3c4048">Outlet List</h6>
-              </div>
+            <div class="card mt-4">
+              <div class="card-header bg-primary text-white">Outlet List</div>
               <div class="card-body">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#add-modal">Add Outlet</button>
+                <!-- End of Button trigger modal -->
                 <div class="table-responsive">
-                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <table class="table table-bordered table-striped table-hover">
                     <thead>
                       <tr>
-                        <th class="judul" style="color: #00abb3">Name</th>
-                        <th class="judul" style="color: #00abb3">Address</th>
-                        <th class="judul" style="color: #00abb3">Operation Hours</th>
-                        <th class="judul" style="color: #00abb3">Contact</th>
-                        <th class="judul" style="color: #00abb3">Last Transaction</th>
-                        <th class="judul" style="color: #00abb3">Action</th>
+                        <th class="judul">No</th>
+                        <th class="judul">Name</th>
+                        <th class="judul">Contact</th>
+                        <th class="judul">Address</th>
+                        <th class="judul">Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Kepiting Jay Food</td>
-                        <td>Jl. Merpati No.36</td>
-                        <td>Monday-Sunday 24 Hours</td>
                         <td>081321120049</td>
-                        <td>2022/04/25</td>
-                        <td></td>
+                        <td>Jl. Merpati No.36</td>
+                        <td>
+                          <a class="btn btn-warning btn-sm" href="#" role="button" style="color: black">Edit</a>
+                          <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
+                        </td>
                       </tr>
                       <tr>
+                        <td>2</td>
                         <td>Dapur Cak Ning</td>
-                        <td>Jl. Teuku Umar Gg. Sesapi No.5</td>
-                        <td>Monday-Sunday 24 Hours</td>
                         <td>081765894654</td>
-                        <td>2022/07/25</td>
-                        <td></td>
+                        <td>Jl. Teuku Umar Gg. Sesapi No.5</td>
+                        <td>
+                          <a class="btn btn-warning btn-sm" href="#" role="button" style="color: black">Edit</a>
+                          <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
+                        </td>
                       </tr>
                       <tr>
+                        <td>3</td>
                         <td>Dimsum Bunda</td>
-                        <td>Jl. Tangkuban Perahu No.98</td>
-                        <td>Monday-Sunday 24 Hours</td>
                         <td>085666664444</td>
-                        <td>2022/01/12</td>
-                        <td></td>
+                        <td>Jl. Tangkuban Perahu No.98</td>
+                        <td>
+                          <a class="btn btn-warning btn-sm" href="#" role="button" style="color: black">Edit</a>
+                          <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
+                        </td>
                       </tr>
                       <tr>
+                        <td>4</td>
                         <td>Dapur Arum</td>
+                        <td>085277778899</td>
                         <td>Jl. Kerobokan No.88</td>
                         <td>
-                          Monday-Saturday 09.00-17.00 <br />
-                          Sunday 09.00-15.00
+                          <a class="btn btn-warning btn-sm" href="#" role="button" style="color: black">Edit</a>
+                          <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
                         </td>
-                        <td>085277778899</td>
-                        <td>2022/03/29</td>
-                        <td></td>
                       </tr>
                       <tr>
+                        <td>5</td>
                         <td>Lapo Toba Tabo</td>
-                        <td>Jl. Kargo Permai No.198</td>
-                        <td>Monday-Sunday 24 Hours</td>
                         <td>081321232345</td>
-                        <td>2022/09/28</td>
-                        <td></td>
+                        <td>Jl. Kargo Permai No.198</td>
+                        <td>
+                          <a class="btn btn-warning btn-sm" href="#" role="button" style="color: black">Edit</a>
+                          <a class="btn btn-danger btn-sm" href="#" role="button">Delete</a>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="add-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Add Outlet</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <form action="">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                              <div class="mb-3">
+                                <label class="form-label">Outlet Name</label>
+                                <input type="text" class="form-control"/>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Contact</label>
+                                <input type="number" class="form-control"/>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Address</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                              </div>
+                            </div>
+                       
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                      </form>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Modal -->
                 </div>
               </div>
             </div>
@@ -391,7 +440,7 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer" style="background-color: #EAEAEA">
+        <footer class="sticky-footer" style="background-color: #ffffff">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
               <span>Copyright &copy; Manage Inventory 2022</span>
@@ -427,6 +476,9 @@
         </div>
       </div>
     </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
