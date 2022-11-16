@@ -224,7 +224,8 @@
             <div class="card shadow mb-4">
               <div class="card-header py-3 d-flex justify-content-between">
                 <h5 class="m-0 font-weight-bold" style="color: #3c4048">Stock List</h5>
-                <button class="btn btn-secondary">Add Stock</button>
+                <!-- <button class="btn btn-secondary">Add Stock</button> -->
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#add-modal">Add Stock</button>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -238,8 +239,6 @@
                         <th class="judul" style="color: #00abb3">Barang Keluar </th>
                         <th class="judul" style="color: #00abb3">Stok Akhir </th>
                         <th class="judul" style="color: #00abb3">Manage</th>
-
-
                       </tr>
                     </thead>
                     <tbody>
@@ -265,7 +264,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -408,7 +406,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -421,7 +418,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -434,7 +430,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -447,7 +442,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -460,7 +454,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -473,7 +466,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -486,7 +478,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -499,7 +490,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                       <tr>
@@ -512,7 +502,6 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                        <tr>
@@ -525,12 +514,20 @@
                         <td>
                           <a href=""class="edit"><i class="fas fa-pen fa-lg mr-4"></i></a>
                           <a href=""class="trash"><i class="fas fa-trash fa-lg"></i></a>
-
                         </td>
                       </tr>
                     </div>
                     </tbody>
                   </table>
+                  
+                  <!-- modal -->
+                  <div class="modal fade" id="add-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Add Outlet</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
                 </div>
               </div>
             </div>
